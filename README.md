@@ -149,4 +149,24 @@ npm run dev
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
+
+## 🎓 Academic Project
+This system was developed as a **Major Project for Sustainable Agriculture** as part of final year academics (2025 - 2026).
+
+## 🤝 Contributing
+We are constantly looking for ways to improve this system! Whether it's adding support for more soil types, integrating satellite data, or improving the ML models, your contributions are welcome.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+## 📬 Contact & Socials
+Feel free to reach out for collaborations or queries:
+
+[![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:guruprasadpujari78@gmail.com)
+[![Instagram](https://img.shields.io/badge/Instagram-E4405F?style=for-the-badge&logo=instagram&logoColor=white)](https://www.instagram.com/guruprasad__pj/#)
+
+---
 <p align="center">Developed with ❤️ for Sustainable Agriculture</p>
