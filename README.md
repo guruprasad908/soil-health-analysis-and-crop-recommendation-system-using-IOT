@@ -15,19 +15,19 @@
 
 ---
 
-## 🌟 Overview
+##  Overview
 The **Soil Health & Intelligent Crop Recommendation System** is a cutting-edge Agricultural IoT solution designed to empower farmers with data-driven insights. By combining real-time sensor data with high-precision machine learning models, the system offers personalized crop suggestions, fertilizer strategies, and detailed soil analysis.
 
-### 🚀 Key Features
-- **🛰️ Real-time IoT Monitoring**: Integration with NPK sensors, DHT11, and Capacitive Moisture sensors for live soil auditing.
-- **🧠 Stacking Ensemble Intelligence**: High-accuracy predictions using a meta-learner architecture (RF, GB, XGB, SVM).
-- **📋 Professional Reporting**: Automated generation of bilingual (English/Kannada) PDF soil health reports.
-- **📊 Interactive Dashboard**: Modern React-based UI with live gauges, historical trends, and farm visualization.
-- **🌦️ Smart Weather Integration**: Hyper-local weather forecasting and historical climate analysis.
+###  Key Features
+- ** Real-time IoT Monitoring**: Integration with NPK sensors, DHT11, and Capacitive Moisture sensors for live soil auditing.
+- ** Stacking Ensemble Intelligence**: High-accuracy predictions using a meta-learner architecture (RF, GB, XGB, SVM).
+- ** Professional Reporting**: Automated generation of bilingual (English/Kannada) PDF soil health reports.
+- ** Interactive Dashboard**: Modern React-based UI with live gauges, historical trends, and farm visualization.
+- ** Smart Weather Integration**: Hyper-local weather forecasting and historical climate analysis.
 
 ---
 
-## 🏗️ System Architecture
+##  System Architecture
 
 ### 1. High-Level Data Flow
 ```mermaid
@@ -105,7 +105,7 @@ graph TD
 
 ---
 
-## 🛠️ Technology Stack
+##  Technology Stack
 | Layer | Technologies |
 |---|---|
 | **Frontend** | React, Vite, Recharts, Framer Motion, CSS3 |
@@ -116,7 +116,7 @@ graph TD
 
 ---
 
-## ⚡ Quick Start
+## Quick Start
 
 ### 1. Environment Setup
 Clone the repository and create a virtual environment:
@@ -145,15 +145,15 @@ npm run dev
 
 ---
 
-## 📜 License
+##  License
 This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
 ---
 
-## 🎓 Academic Project
+##  Academic Project
 This system was developed as a **Major Project for Sustainable Agriculture** as part of final year academics (2025 - 2026).
 
-## 🤝 Contributing
+##  Contributing
 We are constantly looking for ways to improve this system! Whether it's adding support for more soil types, integrating satellite data, or improving the ML models, your contributions are welcome.
 
 1. Fork the Project
@@ -162,7 +162,7 @@ We are constantly looking for ways to improve this system! Whether it's adding s
 4. Push to the Branch (`git push origin feature/AmazingFeature`)
 5. Open a Pull Request
 
-## 📬 Contact & Socials
+##  Contact & Socials
 Feel free to reach out for collaborations or queries:
 
 [![Gmail](https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white)](mailto:guruprasadpujari78@gmail.com)
