@@ -1,0 +1,23 @@
+#root {
+  width: 100%;
+  min-height: 100vh;
+  background: var(--app-background);
+  color: var(--text-primary);
+}
+
+.App {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  padding: 2rem 0 3rem;
+}
+
+@media (max-width: 768px) {
+  .main-content {
+    padding: 1.5rem 0 2.5rem;
+  }
+}

@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+32.8,43.6,41.8,29.1,68.01,7.23,528.0,groundnut,red soil
+33.9,31.4,33.0,26.48,65.21,7.09,868.9,groundnut,red soil
+27.4,37.5,45.5,27.53,67.64,7.46,850.6,groundnut,alluvial soil
+37.7,31.0,41.7,30.56,59.04,6.16,676.5,groundnut,alluvial soil
+27.8,34.9,45.8,26.34,64.37,7.4,536.2,groundnut,red soil
+33.9,26.3,39.3,27.93,52.25,7.17,511.5,groundnut,red soil
+33.0,37.1,49.7,29.83,51.95,6.45,613.8,groundnut,alluvial soil
+28.3,33.5,45.8,27.74,56.3,7.21,580.2,groundnut,alluvial soil
+24.7,42.5,30.7,32.01,53.46,6.88,807.6,groundnut,red soil
+23.0,40.6,40.9,27.66,51.48,7.38,706.6,groundnut,red soil

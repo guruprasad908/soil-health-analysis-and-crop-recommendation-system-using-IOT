@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+97.0,43.0,48.9,29.92,60.88,6.24,789.3,chilli,red soil
+89.6,46.6,55.0,29.27,74.0,7.14,979.8,chilli,black soil
+78.6,38.4,56.8,26.23,62.63,7.12,800.8,chilli,red soil
+42.2,7.9,0.9,11.59,45.11,8.86,1866.5,chilli,red soil
+126.5,42.5,39.9,26.43,81.3,7.41,1284.4,chilli,red soil
+90.2,47.0,46.2,27.85,72.0,7.03,779.8,chilli,black soil
+90.6,43.2,50.5,26.69,62.34,6.08,977.5,chilli,black soil
+78.8,54.8,64.3,26.74,72.36,7.07,664.4,chilli,black soil
+98.8,41.5,52.9,25.03,67.85,6.26,900.9,chilli,red soil
+70.3,50.8,54.8,30.47,63.95,6.65,769.5,chilli,black soil

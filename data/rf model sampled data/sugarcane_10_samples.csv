@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+17.0,70.1,52.6,41.07,80.88,7.91,1471.7,sugarcane,black soil
+134.7,67.3,83.0,33.3,68.38,6.6,1235.9,sugarcane,alluvial soil
+104.0,69.6,70.8,26.69,72.89,6.86,1948.3,sugarcane,alluvial soil
+116.6,16.6,91.1,27.7,33.41,7.26,201.8,sugarcane,laterite soil
+132.6,2.9,7.1,20.06,84.79,4.79,1792.4,sugarcane,black soil
+5.8,56.2,36.2,15.55,85.05,9.1,2089.9,sugarcane,alluvial soil
+134.3,60.0,77.9,31.4,63.58,6.71,1820.0,sugarcane,black soil
+107.2,51.1,69.9,25.92,79.12,6.5,1650.3,sugarcane,alluvial soil
+130.2,58.0,60.6,31.11,65.66,7.12,1927.9,sugarcane,alluvial soil
+111.5,57.8,89.6,29.49,84.53,6.8,1538.4,sugarcane,black soil

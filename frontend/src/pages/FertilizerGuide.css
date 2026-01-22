@@ -1,0 +1,418 @@
+/* 🌿 GENERAL LAYOUT */
+.fertilizer-guide {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1rem 4rem;
+  color: var(--text-primary);
+}
+
+.fertilizer-guide .container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 🧭 SECTION HEADING */
+.section-heading {
+  text-align: center;
+}
+
+.section-heading h1 {
+  font-size: 2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.section-subtitle {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  opacity: 0.9; /* Improve readability */
+}
+
+/* 🔖 TABS NAVIGATION */
+.tabs-container {
+  background: var(--surface-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-md);
+  padding: 1rem 1.5rem 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.8rem;
+  justify-content: center;
+  border-bottom: 1px solid var(--card-border);
+  padding-bottom: 1rem;
+}
+
+.tab {
+  background: var(--surface-secondary);
+  border: 1px solid var(--card-border);
+  color: var(--text-secondary);
+  border-radius: var(--border-radius-sm);
+  padding: 0.6rem 1.2rem;
+  cursor: pointer;
+  font-weight: 500;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: var(--surface-highlight);
+  color: var(--text-primary);
+  border-color: var(--border-color-hover);
+}
+
+.tab.active {
+  background: var(--accent-primary);
+  color: white; /* Ensure white text on active tab */
+  border-color: var(--accent-primary);
+}
+
+/* 🧩 TAB CONTENT */
+.tab-content-container {
+  margin-top: 1rem;
+}
+
+.tab-content {
+  animation: fadeIn 0.4s ease;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* 🪴 CARD STYLING */
+.card {
+  background: var(--surface-secondary);
+  border-radius: var(--border-radius-md);
+  border: 1px solid var(--card-border);
+  box-shadow: var(--shadow-sm);
+  padding: 1.5rem;
+  display: grid;
+  gap: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-3px);
+  box-shadow: var(--shadow-md);
+  border-color: var(--card-border-hover);
+}
+
+.card header {
+  display: grid;
+  gap: 0.5rem;
+}
+
+.badge {
+  background: var(--accent-primary);
+  color: white; /* Ensure white text on badge */
+  font-size: 0.8rem;
+  padding: 0.3rem 0.7rem;
+  border-radius: var(--border-radius-sm);
+  width: fit-content;
+  font-weight: 600;
+}
+
+.section-description {
+  color: var(--text-secondary);
+  font-size: 0.95rem;
+  line-height: 1.6;
+  opacity: 0.95; /* Improve readability */
+}
+
+/* 🖼️ IMAGE STYLING - CONSISTENT SIZING */
+.image-container {
+  text-align: center;
+  margin: 1.5rem 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.image-container img {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--card-shadow);
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+.content-image {
+  max-width: 100%;
+  max-height: 300px;
+  width: auto;
+  height: auto;
+  border-radius: var(--border-radius-md);
+  box-shadow: var(--card-shadow);
+  margin: 0 auto;
+  display: block;
+  object-fit: contain;
+}
+
+/* 🧪 NUTRIENT CARDS */
+.nutrient-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 1.5rem;
+}
+
+.nutrient-item {
+  background: var(--surface-secondary);
+  border: 1px solid var(--card-border-hover);
+  border-radius: var(--border-radius-md);
+  padding: 1.4rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.nutrient-head {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding-bottom: 0.7rem;
+  border-bottom: 1px solid var(--card-border);
+}
+
+.nutrient-icon {
+  font-size: 1.8rem;
+}
+
+.nutrient-details p {
+  margin: 0;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: var(--text-secondary);
+  opacity: 0.95; /* Improve readability */
+}
+
+.nutrient-deficiency {
+  color: var(--warning);
+  background: var(--alert-warning-bg);
+  padding: 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+}
+
+.nutrient-excess {
+  color: var(--danger);
+  background: var(--alert-error-bg);
+  padding: 0.5rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+}
+
+.source-list {
+  margin: 0.4rem 0 0 1rem;
+  color: var(--text-muted);
+  font-size: 0.9rem;
+  opacity: 0.9; /* Improve readability */
+}
+
+/* 🌾 SECONDARY & MICRO GRID */
+.secondary-grid,
+.micro-grid,
+.bio-grid,
+.organic-grid,
+.method-grid,
+.timing-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.3rem;
+}
+
+.secondary-item,
+.micro-item,
+.bio-item,
+.organic-item,
+.method-item,
+.timing-item {
+  background: var(--surface-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-md);
+  padding: 1.3rem;
+  display: grid;
+  gap: 0.7rem;
+  transition: all 0.3s ease;
+}
+
+.secondary-item:hover,
+.micro-item:hover,
+.bio-item:hover,
+.organic-item:hover,
+.method-item:hover,
+.timing-item:hover {
+  border-color: var(--card-border-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--shadow-sm);
+}
+
+.secondary-item h3,
+.micro-item h3,
+.bio-item h3,
+.organic-item h3,
+.method-item h3,
+.timing-item h3 {
+  color: var(--text-primary);
+  font-size: 1.2rem;
+  margin-bottom: 0.3rem;
+}
+
+.secondary-item p,
+.micro-item p,
+.bio-item p,
+.organic-item p,
+.method-item p,
+.timing-item p {
+  color: var(--text-secondary);
+  font-size: 0.9rem;
+  line-height: 1.5;
+  margin: 0;
+  opacity: 0.95; /* Improve readability */
+}
+
+.method-pros,
+.method-cons,
+.method-best {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  opacity: 0.95; /* Improve readability */
+}
+
+.method-pros {
+  color: var(--success);
+}
+
+.method-cons {
+  color: var(--danger);
+}
+
+.method-best {
+  color: var(--accent-primary);
+}
+
+/* 📋 PRACTICE & SAFETY LISTS */
+.practice-list,
+.safety-list {
+  display: grid;
+  gap: 0.8rem;
+  margin: 1rem 0;
+  padding-left: 1.5rem;
+}
+
+.practice-list li,
+.safety-list li {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  opacity: 0.95; /* Improve readability */
+}
+
+/* 🧮 DOSAGE CONTENT */
+.dosage-content {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.dosage-formula,
+.dosage-example,
+.dosage-tips {
+  background: var(--surface-primary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-sm);
+  padding: 1.2rem;
+}
+
+.dosage-formula h3,
+.dosage-example h3,
+.dosage-tips h3 {
+  color: var(--text-primary);
+  margin-bottom: 0.8rem;
+}
+
+.dosage-formula p,
+.dosage-example p {
+  color: var(--text-secondary);
+  font-size: 1rem;
+  line-height: 1.6;
+  opacity: 0.95; /* Improve readability */
+}
+
+.dosage-tips ul {
+  padding-left: 1.5rem;
+  margin: 0;
+}
+
+.dosage-tips li {
+  color: var(--text-secondary);
+  line-height: 1.6;
+  margin-bottom: 0.5rem;
+  opacity: 0.95; /* Improve readability */
+}
+
+/* 🎯 SUCCESS MESSAGE */
+.success-message {
+  text-align: center;
+  padding: 1.8rem;
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dark));
+  border-radius: var(--border-radius-md);
+  color: white;
+  font-weight: 600;
+  font-size: 1.1rem;
+  margin-top: 2rem;
+  box-shadow: var(--card-shadow);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+/* Improve text readability in light mode */
+[data-theme="light"] .success-message {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dark));
+  color: white;
+  border: 1px solid var(--accent-primary-dark);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .fertilizer-guide {
+    padding: 1rem;
+  }
+  
+  .section-heading h1 {
+    font-size: 1.8rem;
+  }
+  
+  .tabs {
+    flex-direction: column;
+  }
+  
+  .tab {
+    width: 100%;
+    text-align: center;
+  }
+  
+  .nutrient-grid,
+  .secondary-grid,
+  .micro-grid,
+  .bio-grid,
+  .organic-grid,
+  .method-grid,
+  .timing-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .image-container img,
+  .content-image {
+    max-height: 200px;
+  }
+}

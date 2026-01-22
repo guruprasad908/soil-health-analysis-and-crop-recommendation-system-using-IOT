@@ -1,0 +1,16 @@
+{
+  "nitrogen_fertilizer": "./assets/images/nitrogen_fertilizer.jpg",
+  "phosphorus_fertilizer": "./assets/images/phosphorus_fertilizer.jpg",
+  "potassium_fertilizer": "./assets/images/potassium_fertilizer.jpg",
+  "compost_fertilizer": "./assets/images/compost_fertilizer.jpg",
+  "farmyard_manure": "./assets/images/farmyard_manure.jpg",
+  "vermicompost": "./assets/images/vermicompost.jpg",
+  "rhizobium_culture": "./assets/images/rhizobium_culture.jpg",
+  "mycorrhiza_fungi": "./assets/images/mycorrhiza_fungi.jpg",
+  "fertilizer_application": "./assets/images/fertilizer_application.jpg",
+  "fertigation_method": "./assets/images/fertigation_method.jpg",
+  "organic_fertilizer": "./assets/images/organic_fertilizer.jpg",
+  "soil_health": "./assets/images/soil_health.jpg",
+  "biofertilizer_bacteria": "./assets/images/biofertilizer_bacteria.jpg",
+  "nutrient_management": "./assets/images/nutrient_management.jpg"
+}

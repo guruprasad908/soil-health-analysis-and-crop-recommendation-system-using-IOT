@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+104.3,48.6,53.6,23.63,64.62,7.02,673.1,onion,alluvial soil
+119.0,27.0,34.7,28.39,21.72,5.92,218.1,onion,laterite soil
+87.6,46.9,62.6,24.74,69.27,6.59,679.3,onion,alluvial soil
+98.8,41.1,59.3,18.55,56.17,6.66,879.0,onion,black soil
+105.9,47.7,57.4,27.54,69.38,6.18,706.3,onion,red soil
+109.9,52.1,53.2,21.56,67.47,6.88,711.9,onion,black soil
+84.4,51.6,60.1,27.38,65.9,6.9,874.3,onion,red soil
+83.6,43.7,61.5,21.85,72.56,7.49,627.1,onion,alluvial soil
+89.5,49.3,69.2,24.24,69.94,6.35,849.1,onion,alluvial soil
+84.5,66.7,2.0,17.46,41.77,8.33,1180.1,onion,alluvial soil

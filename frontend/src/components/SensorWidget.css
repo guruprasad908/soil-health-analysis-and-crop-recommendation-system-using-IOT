@@ -1,0 +1,12 @@
+}
+
+.sensor-widget .widget-metric .value {
+    font-size: 14px;
+    font-weight: bold;
+    color: #2c3e50;
+}
+
+.sensor-widget-toggle:hover {
+    transform: scale(1.1);
+    transition: transform 0.2s;
+}

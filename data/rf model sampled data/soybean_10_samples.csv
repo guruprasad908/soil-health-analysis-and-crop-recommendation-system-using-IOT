@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+39.8,43.1,36.1,25.67,78.45,6.93,966.3,soybean,alluvial soil
+33.6,49.6,31.6,22.75,66.95,7.01,934.5,soybean,black soil
+39.1,46.8,36.1,28.56,69.27,6.56,899.5,soybean,black soil
+43.0,32.5,35.9,25.51,64.47,6.6,803.9,soybean,alluvial soil
+45.8,35.2,27.4,26.34,60.67,6.45,757.2,soybean,alluvial soil
+36.1,32.1,31.7,26.37,61.84,6.86,962.8,soybean,black soil
+43.3,44.8,30.6,22.49,68.6,6.57,601.1,soybean,alluvial soil
+25.2,10.6,82.2,38.98,22.12,5.81,905.1,soybean,red soil
+47.3,40.1,30.9,27.35,73.67,7.24,898.3,soybean,black soil
+43.9,42.7,43.9,24.21,77.49,7.47,745.5,soybean,black soil

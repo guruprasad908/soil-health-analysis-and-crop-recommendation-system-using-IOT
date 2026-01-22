@@ -1,0 +1,34 @@
+Input Location,Detected District,Input Crop,Is Suitable,Outcome
+Vijayapura,vijayapura,Coffee,No,Filtered out (Unsuitable)
+Vijayapura,vijayapura,Jowar,Yes,Passed filter
+Vijayapura,vijayapura,Bajra,Yes,Passed filter
+Vijayapura,vijayapura,Rice,No,Passed filter
+Vijayapura,vijayapura,Apple,No,Filtered out (Unsuitable)
+Bijapur,vijayapura,Maize,Yes,Passed filter
+Bijapur,vijayapura,Tea,No,Filtered out (Unsuitable)
+Bijapur,vijayapura,Pomegranate,Yes,Passed filter
+"Tonsyal, Vijayapura",vijayapura,Sunflower,Yes,Passed filter
+"Tonsyal, Vijayapura",vijayapura,Rubber,No,Filtered out (Unsuitable)
+Belagavi,belagavi,Rice,Yes,Passed filter
+Belagavi,belagavi,Coffee,No,Filtered out (Unsuitable)
+Belagavi,belagavi,Sugarcane,Yes,Passed filter
+Gokak,belagavi,Maize,Yes,Passed filter
+Gokak,belagavi,Coconut,No,Passed filter
+Bagalkot,bagalkot,Jowar,Yes,Passed filter
+Bagalkot,bagalkot,Tea,No,Filtered out (Unsuitable)
+Badami,bagalkot,Cotton,Yes,Passed filter
+Badami,bagalkot,Cardamom,No,Filtered out (Unsuitable)
+Haveri,haveri,Rice,Yes,Passed filter
+Haveri,haveri,Rubber,No,Filtered out (Unsuitable)
+Hirekerur,haveri,Chilli,Yes,Passed filter
+Hirekerur,haveri,Coffee,No,Filtered out (Unsuitable)
+Gadag,gadag,Jowar,Yes,Passed filter
+Gadag,gadag,Rice,No,Filtered out (Unsuitable)
+Raichur,raichur,Rice,Yes,Passed filter
+Raichur,raichur,Coffee,No,Filtered out (Unsuitable)
+Koppal,koppal,Maize,Yes,Passed filter
+Koppal,koppal,Apple,No,Passed filter
+Unknown Location,default,Rice,Yes,Passed filter
+Unknown Location,default,Coffee,No,Filtered out (Unsuitable)
+Bangalore,default,Rice,Yes,Passed filter
+Bangalore,default,Coffee,No,Filtered out (Unsuitable)

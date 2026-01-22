@@ -1,0 +1,44 @@
+{
+  "model_type": "Reinforcement Learning (Q-Learning)",
+  "crops": [
+    "bajra",
+    "blackgram",
+    "chickpea",
+    "chilli",
+    "cotton",
+    "grapes",
+    "greengram",
+    "groundnut",
+    "jowar",
+    "lentil",
+    "maize",
+    "onion",
+    "pigeonpeas",
+    "pomegranate",
+    "ragi",
+    "safflower",
+    "soybean",
+    "sugarcane",
+    "sunflower",
+    "tomato",
+    "wheat"
+  ],
+  "training_date": "2025-11-16T17:50:54.313287",
+  "training_samples": 11760,
+  "test_samples": 2940,
+  "test_accuracy": 0.036734693877551024,
+  "hyperparameters": {
+    "learning_rate": 0.1,
+    "discount_factor": 0.95,
+    "epsilon": 0.2
+  },
+  "stats": {
+    "total_predictions": 14700,
+    "total_feedback": 11760,
+    "success_rate": 0.0399,
+    "states_explored": 4798,
+    "experience_buffer_size": 10000,
+    "learning_rate": 0.1,
+    "epsilon": 0.2
+  }
+}

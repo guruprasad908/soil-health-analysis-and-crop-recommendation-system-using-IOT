@@ -1,0 +1,466 @@
+/* 📦 BATCH PREDICTION STYLES */
+
+/* 🎨 Theme Variables */
+:root {
+  --batch-primary: #3fa96b;
+  --batch-secondary: #7bd88f;
+  --batch-accent: #f9c74f;
+  --batch-dark: #0b1d16;
+  --batch-light: #f4fff9;
+  --batch-card: rgba(18, 53, 36, 0.85);
+  --batch-shadow: 0 18px 30px -20px rgba(16, 54, 32, 0.65);
+}
+
+/* 🏗️ LAYOUT */
+.batch-view {
+  display: flex;
+  justify-content: center;
+  width: 100%;
+  padding: 2rem 1rem 4rem;
+}
+
+.batch-view .container {
+  width: 100%;
+  max-width: 1400px;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+/* 🧭 SECTION HEADER */
+.section-heading {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.section-heading h1 {
+  font-size: 2.2rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+  color: var(--text-primary);
+}
+
+.section-subtitle {
+  font-size: 1.1rem;
+  color: var(--text-secondary);
+  max-width: 800px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+/* 📊 BATCH LAYOUT */
+.batch-layout {
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  gap: 2rem;
+}
+
+/* 📤 UPLOAD PANEL */
+.upload-panel {
+  background: var(--surface-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 1.75rem;
+}
+
+.upload-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.upload-instructions h2 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.upload-instructions ul {
+  list-style: none;
+  padding: 0;
+  margin: 1rem 0;
+}
+
+.upload-instructions li {
+  padding: 0.5rem 0 0.5rem 1.5rem;
+  position: relative;
+  color: var(--text-secondary);
+}
+
+.upload-instructions li:before {
+  content: "•";
+  color: var(--accent-primary);
+  position: absolute;
+  left: 0;
+  font-weight: bold;
+}
+
+.upload-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.form-group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.form-group label {
+  font-weight: 500;
+  color: var(--text-secondary);
+}
+
+.form-group input {
+  background: var(--surface-secondary);
+  border: 1px solid var(--card-border);
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1rem;
+  font-family: inherit;
+  font-size: 1rem;
+  color: var(--text-primary);
+  transition: var(--transition-base);
+}
+
+.form-group input:focus {
+  outline: none;
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 0 3px var(--input-focus-shadow);
+}
+
+.form-hint {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+}
+
+.btn-primary {
+  background: linear-gradient(135deg, var(--accent-primary), var(--accent-primary-dark));
+  color: var(--button-text);
+  border: none;
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: transform 0.2s ease, box-shadow 0.2s ease, background 0.2s ease;
+  box-shadow: 0 12px 20px -12px rgba(123, 216, 143, 0.6);
+  align-self: start;
+}
+
+.btn-primary:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 18px 28px -14px rgba(123, 216, 143, 0.75);
+}
+
+.btn-primary:disabled {
+  background: rgba(151, 190, 166, 0.35);
+  color: var(--text-muted);
+  cursor: not-allowed;
+  transform: none;
+  box-shadow: none;
+}
+
+.btn-ghost {
+  background: transparent;
+  color: var(--text-secondary);
+  border: 1px solid var(--border-color-strong);
+  border-radius: var(--border-radius-sm);
+  padding: 0.75rem 1.6rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: var(--transition-base);
+}
+
+.btn-ghost:hover {
+  border-color: var(--border-color-hover);
+  color: var(--accent-primary);
+  background: var(--surface-highlight);
+}
+
+/* 📥 BATCH RESULTS */
+.batch-results {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+.results-panel {
+  background: var(--surface-primary);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--card-shadow);
+  padding: 1.75rem;
+}
+
+/* 📊 ADVANCED DASHBOARD */
+.advanced-dashboard {
+  margin-bottom: 2rem;
+}
+
+.advanced-dashboard h2 {
+  font-size: 1.8rem;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  text-align: center;
+}
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.metric-card {
+  background: var(--surface-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  text-align: center;
+  transition: var(--transition-base);
+}
+
+.metric-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--card-border-hover);
+  box-shadow: var(--shadow-md);
+}
+
+.metric-value {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--accent-primary);
+  margin-bottom: 0.5rem;
+}
+
+.metric-label {
+  font-size: 1rem;
+  color: var(--text-secondary);
+}
+
+/* 📈 ADVANCED CHARTS */
+.advanced-charts {
+  margin: 2rem 0;
+}
+
+.advanced-charts h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.chart-row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(500px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-container-large {
+  background: var(--surface-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 1.5rem;
+  border: 1px solid var(--card-border);
+  height: 400px;
+}
+
+.chart-container-large h3,
+.chart-container-large h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+}
+
+.chart-container-large h3 {
+  font-size: 1.3rem;
+}
+
+/* 📊 BATCH CHARTS */
+.batch-charts {
+  margin: 3rem 0;
+}
+
+.batch-charts h3 {
+  text-align: center;
+  margin-bottom: 1.5rem;
+  color: var(--text-primary);
+  font-size: 1.5rem;
+}
+
+.chart-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  margin-bottom: 2rem;
+}
+
+.chart-wrapper {
+  background: var(--surface-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  border: 1px solid var(--card-border);
+}
+
+.chart-wrapper h4 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--text-primary);
+  font-size: 1.1rem;
+}
+
+.chart-container {
+  height: 250px;
+  position: relative;
+}
+
+/* 📋 RESULTS TABLE */
+.table-scroll {
+  overflow-x: auto;
+  margin-top: 2rem;
+}
+
+.table-scroll table {
+  width: 100%;
+  border-collapse: collapse;
+  background: var(--surface-secondary);
+  border-radius: var(--border-radius-sm);
+  overflow: hidden;
+}
+
+.table-scroll th,
+.table-scroll td {
+  padding: 0.9rem 1.1rem;
+  text-align: left;
+  border-bottom: 1px solid var(--table-border);
+  color: var(--text-primary);
+}
+
+.table-scroll th {
+  background: var(--surface-highlight);
+  font-weight: 600;
+}
+
+.table-scroll tbody tr:nth-child(odd) {
+  background: var(--table-stripe);
+}
+
+.status-success {
+  color: var(--success);
+  font-weight: 500;
+}
+
+.status-error {
+  color: var(--danger);
+  font-weight: 500;
+}
+
+/* 🚨 ALERTS */
+.alert {
+  padding: 1rem;
+  border-radius: var(--border-radius-sm);
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.65rem;
+}
+
+.alert-error {
+  background: var(--alert-error-bg);
+  border: 1px solid var(--alert-error-border);
+  color: var(--danger);
+}
+
+/* 🔄 LOADING */
+.loading {
+  text-align: center;
+  padding: 2rem 0;
+}
+
+.spinner {
+  border: 5px solid var(--spinner-border);
+  border-top-color: var(--accent-primary);
+  border-radius: 50%;
+  width: 52px;
+  height: 52px;
+  margin: 0 auto 1rem;
+  animation: spin 0.9s linear infinite;
+}
+
+@keyframes spin {
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+/* 📱 RESPONSIVE */
+@media (max-width: 1200px) {
+  .chart-row {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container-large {
+    height: 300px;
+  }
+}
+
+@media (max-width: 1024px) {
+  .batch-layout {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .chart-container {
+    height: 200px;
+  }
+  
+  .chart-container-large {
+    height: 250px;
+  }
+}
+
+@media (max-width: 768px) {
+  .batch-view {
+    padding: 1rem;
+  }
+  
+  .section-heading h1 {
+    font-size: 1.8rem;
+  }
+  
+  .metrics-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+  
+  .metric-value {
+    font-size: 2rem;
+  }
+  
+  .advanced-charts h3,
+  .batch-charts h3 {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .metrics-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .metric-value {
+    font-size: 1.8rem;
+  }
+  
+  .chart-container-large {
+    height: 200px;
+    padding: 1rem;
+  }
+  
+  .chart-container {
+    height: 180px;
+  }
+}

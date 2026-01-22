@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+37.2,25.9,40.0,34.05,43.06,7.48,522.8,bajra,alluvial soil
+53.3,34.7,33.0,34.55,53.29,6.85,402.3,bajra,alluvial soil
+76.8,20.2,27.9,37.9,55.9,8.23,1018.7,bajra,black soil
+99.2,73.4,76.0,15.64,45.86,9.39,2293.2,bajra,black soil
+53.0,20.1,37.8,29.75,54.12,7.58,587.0,bajra,red soil
+53.3,26.6,26.2,33.67,53.45,6.72,462.1,bajra,alluvial soil
+40.9,21.9,33.4,27.03,58.63,7.43,451.7,bajra,alluvial soil
+13.1,61.8,78.3,38.13,37.31,4.81,1858.6,bajra,black soil
+54.8,26.6,28.4,27.22,55.27,6.21,412.2,bajra,alluvial soil
+50.6,22.7,33.8,33.64,40.86,7.68,536.6,bajra,red soil

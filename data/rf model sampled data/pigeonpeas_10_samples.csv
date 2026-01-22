@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+34.6,34.7,39.9,29.79,55.67,7.63,897.4,pigeonpeas,black soil
+35.7,36.3,34.8,23.67,47.45,7.09,629.8,pigeonpeas,red soil
+26.7,34.0,25.4,28.04,57.28,7.98,757.3,pigeonpeas,red soil
+121.1,66.0,77.3,22.88,73.83,7.4,674.0,pigeonpeas,black soil
+69.0,66.8,82.6,28.32,47.89,5.17,1528.7,pigeonpeas,alluvial soil
+78.3,41.3,74.2,18.8,84.4,8.48,1133.0,pigeonpeas,laterite soil
+26.4,31.2,36.0,23.69,55.6,7.47,787.5,pigeonpeas,black soil
+32.9,30.7,35.8,30.11,66.26,7.85,865.8,pigeonpeas,black soil
+36.4,32.0,31.5,22.44,69.62,7.58,830.2,pigeonpeas,red soil
+52.1,32.3,77.2,30.47,89.04,9.33,1019.4,pigeonpeas,alluvial soil

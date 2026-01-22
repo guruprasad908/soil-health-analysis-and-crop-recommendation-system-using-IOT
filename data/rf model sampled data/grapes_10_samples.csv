@@ -1,0 +1,11 @@
+N,P,K,temperature,humidity,ph,rainfall,label,soil_type
+113.1,68.3,91.8,28.96,67.88,7.15,758.0,grapes,black soil
+112.9,61.4,93.0,22.44,50.96,6.66,697.0,grapes,red soil
+108.5,56.7,71.4,21.68,54.12,6.51,712.6,grapes,black soil
+106.6,52.8,98.7,21.18,51.13,7.05,876.6,grapes,black soil
+107.6,67.7,83.7,22.27,57.11,7.16,767.2,grapes,red soil
+93.6,69.0,94.5,25.07,63.99,6.54,824.2,grapes,black soil
+117.1,62.5,75.3,27.82,68.28,6.56,798.9,grapes,black soil
+100.3,54.9,90.3,21.99,50.32,6.78,688.4,grapes,red soil
+93.5,51.5,97.4,29.55,58.51,7.06,714.0,grapes,black soil
+99.6,51.6,87.1,25.45,59.81,7.44,696.4,grapes,black soil
