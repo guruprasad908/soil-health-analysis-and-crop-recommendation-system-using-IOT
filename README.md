@@ -1,147 +1,152 @@
 # Soil Health & Intelligent Crop Recommendation System
 
-## 1. System Overview
-This project is an advanced Agricultural IoT solutions designed to assist farmers in maximizing crop yield and maintaining soil health. It integrates **Real-time IoT Sensors**, **Machine Learning**, and a **Modern Web Interface** to provide accurate crop recommendations, fertilizer advisory, and market insights.
+<p align="center">
+  <img src="images/readme_banner.png" alt="Project Banner" width="100%">
+</p>
+
+<p align="center">
+  <img src="https://img.shields.io/badge/FastAPI-005571?style=for-the-badge&logo=fastapi" alt="FastAPI">
+  <img src="https://img.shields.io/badge/React-20232A?style=for-the-badge&logo=react&logoColor=61DAFB" alt="React">
+  <img src="https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python">
+  <img src="https://img.shields.io/badge/scikit--learn-F7931E?style=for-the-badge&logo=scikit-learn&logoColor=white" alt="Scikit-Learn">
+  <img src="https://img.shields.io/badge/SQLite-07405E?style=for-the-badge&logo=sqlite&logoColor=white" alt="SQLite">
+  <img src="https://img.shields.io/badge/License-MIT-green?style=for-the-badge" alt="License">
+</p>
 
 ---
 
-## 2. High-Level System Architecture
+## 🌟 Overview
+The **Soil Health & Intelligent Crop Recommendation System** is a cutting-edge Agricultural IoT solution designed to empower farmers with data-driven insights. By combining real-time sensor data with high-precision machine learning models, the system offers personalized crop suggestions, fertilizer strategies, and detailed soil analysis.
 
-The following diagram illustrates the complete end-to-end data flow:
+### 🚀 Key Features
+- **🛰️ Real-time IoT Monitoring**: Integration with NPK sensors, DHT11, and Capacitive Moisture sensors for live soil auditing.
+- **🧠 Stacking Ensemble Intelligence**: High-accuracy predictions using a meta-learner architecture (RF, GB, XGB, SVM).
+- **📋 Professional Reporting**: Automated generation of bilingual (English/Kannada) PDF soil health reports.
+- **📊 Interactive Dashboard**: Modern React-based UI with live gauges, historical trends, and farm visualization.
+- **🌦️ Smart Weather Integration**: Hyper-local weather forecasting and historical climate analysis.
 
+---
+
+## 🏗️ System Architecture
+
+### 1. High-Level Data Flow
 ```mermaid
 graph TD
-    %% Define Custom Styles (Black & White)
     classDef bwGraph fill:#ffffff,stroke:#000000,stroke-width:2px,stroke-dasharray: 5 5;
     classDef bwNode fill:#ffffff,stroke:#000000,stroke-width:1px;
     
-    %% --- Top Section: Data Ingestion & Sensing ---
-    subgraph Data_Ingestion
-        USER[User Input]:::bwNode
+    subgraph Data_Sources
+        ESP[ESP8266 + NPK Sensor]:::bwNode
+        UNO[Arduino + DH11/Moisture]:::bwNode
+        USER[Farmer Manual Input]:::bwNode
+    end
+    
+    subgraph Core_Backend
+        API[FastAPI Server]:::bwNode
         DB[(SQLite Database)]:::bwNode
-        API[Backend API]:::bwNode
-
-        USER -->|Manual Entry| API
-        DB <-->|Store/Retrieve| API
+        ML[Ensemble ML Engine]:::bwNode
     end
-    class Data_Ingestion bwGraph
-
-    subgraph Sensing_Layer
-        ESP[ESP8266 NodeMCU]:::bwNode
-        UNO[Arduino UNO R4]:::bwNode
-        
-        NPK[NPK Sensor RS485]:::bwNode
-        DHT[DHT11 Temp/Hum]:::bwNode
-        MOIST[Capacitive Moisture]:::bwNode
-
-        ESP -->|Reads| NPK
-        UNO -->|Reads| DHT
-        UNO -->|Reads| MOIST
+    
+    subgraph Interaction_Layer
+        WEB[React Web App]:::bwNode
+        PDF[PDF Report Engine]:::bwNode
     end
-    class Sensing_Layer bwGraph
 
-    %% Connections between Top Blocks
-    ESP -->|HTTP POST| API
-    UNO -->|HTTP POST| API
+    ESP & UNO -->|HTTP POST| API
+    USER <--> WEB
+    API <--> DB
+    API -->|Features| ML
+    ML -->|Prediction| API
+    API -->|Data| WEB
+    API --> PDF
+    
+    class Data_Sources,Core_Backend,Interaction_Layer bwGraph
+```
 
-    %% --- Middle Section: ML Processing ---
-    subgraph ML_Processing_Layer
-        PRE[Preprocessing]:::bwNode
-        API -->|Input Vector| PRE
-
-        subgraph Ensemble_Models
-            SC[Stacking Classifier]:::bwNode
-            
-            %% Base Models
-            RF[Random Forest]:::bwNode
-            GB[Gradient Boosting]:::bwNode
-            XGB[XGBoost]:::bwNode
-            DT[Decision Tree]:::bwNode
-            SVM[SVM]:::bwNode
-
-            PRE -->|Scaled Features| SC
-            SC --> RF & GB & XGB & DT & SVM
-            
-            %% Meta Learner Convergence
-            META[Meta-Learner]:::bwNode
-            RF & GB & XGB & DT & SVM -->|Predictions| META
-        end
-        class Ensemble_Models bwGraph
+### 2. Backend Architecture (FastAPI Engine)
+The backend is built for speed and modularity, managing the bridge between hardware and intelligence.
+```mermaid
+graph LR
+    classDef bwNode fill:#ffffff,stroke:#000000,stroke-width:1px;
+    
+    REQ[Client Request]:::bwNode --> ROUTE[FastAPI Routers]:::bwNode
+    ROUTE --> AUTH[Auth / Validation]:::bwNode
+    
+    subgraph Services
+        S_ML[ML Prediction Service]:::bwNode
+        S_W[Weather Service]:::bwNode
+        S_P[PDF Generator]:::bwNode
     end
-    class ML_Processing_Layer bwGraph
+    
+    ROUTE --> Services
+    Services --> DB[(SQLAlchemy ORM)]:::bwNode
+    S_ML --> MODELS[[Stacking Model Store]]:::bwNode
+```
 
-    %% --- Bottom Section: Output ---
-    subgraph Output_Layer
-        FINAL[Crop and improvement<br/>recommendation]:::bwNode
-        META -->|Final Prediction| FINAL
-        
-        DASH[React Dashboard]:::bwNode
-        REP[Downloadable Report]:::bwNode
+### 3. Frontend Architecture (React Ecosystem)
+A component-based architecture designed for high responsiveness and accessibility.
+```mermaid
+graph TD
+    classDef bwNode fill:#ffffff,stroke:#000000,stroke-width:1px;
 
-        FINAL -->|JSON| DASH
-        FINAL -->|PDF Generation| REP
+    UI[Root Component]:::bwNode --> CTX[Context API <br/> Theme/Language]:::bwNode
+    CTX --> PAGE[Pages <br/> Dashboard/Predictions]:::bwNode
+    
+    subgraph UI_Components
+        WID[Sensor Widgets]:::bwNode
+        CHT[Recharts Analytics]:::bwNode
+        FRM[Intelligent Forms]:::bwNode
     end
-    class Output_Layer bwGraph
+    
+    PAGE --> UI_Components
+    UI_Components --> API_S[Axios Service Layer]:::bwNode
+    API_S --> BACKEND((FastAPI Endpoint)):::bwNode
 ```
 
 ---
 
-## 3. Architecture Diagram Explanation
-
-### A. Data Ingestion & Sensing Layer (Top Section)
-The system collects input data from two primary sources:
-1.  **Sensing Layer (IoT)**: Real-time environmental data acquisition.
-    *   **ESP8266 NodeMCU**: Reads from the NPK Sensor (Nitrogen, Phosphorus, Potassium) and transmits data via Wi-Fi.
-    *   **Arduino UNO R4**: Collects reading from the DHT11 (Temperature/Humidity) and Capacitive Moisture sensors.
-2.  **Data Ingestion**: Handles manual inputs and data persistence.
-    *   **User Input**: Farmers can manually enter or adjust values via the React Dashboard.
-    *   **SQLite Database**: Acts as the central reservoir, storing historical sensor logs and user profiles.
-    *   **Backend API**: The FastAPI server unifies these streams, accepting HTTP POST requests from both IoT devices and the Web UI.
-
-### B. Machine Learning Processing Layer (Middle Section)
-This is the system's intelligence core, employing a **Stacking Ensemble** technique.
-1.  **Preprocessing**: Raw data (N, P, K, pH, etc.) is standardized using a `StandardScaler` to ensure consistency.
-2.  **Base Models (Level-0)**: The processed vector is fed into five diverse algorithms simultaneously:
-    *   *Random Forest & Decision Tree*: Capture complex non-linear patterns.
-    *   *Gradient Boosting & XGBoost*: Excel at structured tabular data.
-    *   *SVM*: Effective in high-dimensional feature spaces.
-3.  **Meta-Learner (Level-1)**: A **Logistic Regression** model aggregates predictions from all base models. It "learns" which model is most reliable for a given soil type, producing a final, highly accurate prediction.
-
-### C. Output Layer (Bottom Section)
-The actionable insights generated by the model are delivered to the user:
-1.  **Final Recommendation**: The system outputs the optimal crop (e.g., "Rice") along with a confidence score and soil health improvement tips.
-2.  **React Dashboard**: Displays the result instantly with interactive charts and gauges.
-3.  **PDF Generation**: A comprehensive, downloadable report is created for the farmer, containing the diagnosis, fertilizer schedule, and market advice.
+## 🛠️ Technology Stack
+| Layer | Technologies |
+|---|---|
+| **Frontend** | React, Vite, Recharts, Framer Motion, CSS3 |
+| **Backend** | FastAPI, Python 3.10, SQLAlchemy, Pydantic |
+| **Machine Learning** | Scikit-Learn, XGBoost, CatBoost, Joblib |
+| **IoT/Hardware** | Arduino UNO R4, ESP8266, RS485 NPK Sensor, DHT11 |
+| **Database** | SQLite |
 
 ---
 
-## 4. Key Technologies
-*   **Language**: Python 3.10+, JavaScript (ES6+), C++ (Arduino).
-*   **Frontend**: React, Vite, Recharts, CSS Modules.
-*   **Backend**: FastAPI, Uvicorn, SQLAlchemy.
-*   **Machine Learning**: Scikit-Learn, XGBoost, Pandas, Joblib.
-*   **Hardware**: Arduino, ESP8266, DHT22, Capacitive Moisture Sensor.
+## ⚡ Quick Start
 
----
-
-## 5. How to Run (Quick Start)
-
-**1. Backend**
+### 1. Environment Setup
+Clone the repository and create a virtual environment:
 ```bash
-cd soil_crop_recommender
+git clone https://github.com/guruprasad908/soil-health-analysis-and-crop-recommendation-system-using-IOT.git
+cd soil-crop-recommender
 python -m venv venv
-# Activate venv
+source venv/bin/activate  # venv\Scripts\activate on Windows
+```
+
+### 2. Install Dependencies
+```bash
 pip install -r requirements.txt
+cd frontend && npm install
+```
+
+### 3. Launch the System
+**Backend:**
+```bash
 python start_backend.py
 ```
-
-**2. Frontend**
+**Frontend:**
 ```bash
-cd frontend
-npm install
 npm run dev
 ```
 
-**3. Hardware**
-*   Upload `Arduino/arduino_wifi_firmware.ino` to Arduino UNO R4.
-*   Upload `NodeMCU ESP8266/nodemcu_and_npk_code.ino` to NodeMCU.
+---
+
+## 📜 License
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+---
+<p align="center">Developed with ❤️ for Sustainable Agriculture</p>
